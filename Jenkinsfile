@@ -81,6 +81,8 @@ pipeline{
         sh 'git merge develop'
         echo "pushing to origin Master"
         sh 'git push origin master'
+        sh 'crazycoder12'
+        sh 'Pramukhrajs@1'
 
       }
     }
