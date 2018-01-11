@@ -75,6 +75,8 @@ pipeline{
         echo "stashing Any Local changes"
         sh 'git branch'
         sh 'git status'
+        sh "git remote set-url origin git@github.com:CrazyCoder12/content-jenkins-java-project.git"
+        sh 'cat .git/config'
         echo "Taging to the release"
         sh "git tag rectangle-${env.MAJOR_VERSION}.${env.BUILD_NUMBER}"
         sh "git push origin rectangle-${env.MAJOR_VERSION}.${env.BUILD_NUMBER}"
