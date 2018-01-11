@@ -38,7 +38,7 @@ pipeline{
         label 'CentOS'
         }
       steps {
-        sh "wget http://darshan275921.mylabserver.com/rectangles/all/${env.BRANCH_NAME}/rectangle_${env.BUILD_NUMBER}.jar"
+        sh "wget http://darshan275923.mylabserver.com/rectangles/all/${env.BRANCH_NAME}/rectangle_${env.BUILD_NUMBER}.jar"
         sh "java -jar rectangle_${env.BUILD_NUMBER}.jar 3 4"
       }
     }
@@ -48,7 +48,7 @@ pipeline{
         docker 'openjdk:8u151-jre'
       }
       steps {
-        sh "wget http://darshan275921.mylabserver.com/rectangles/all/${env.BRANCH_NAME}/rectangle_${env.BUILD_NUMBER}.jar"
+        sh "wget http://darshan275923.mylabserver.com/rectangles/all/${env.BRANCH_NAME}/rectangle_${env.BUILD_NUMBER}.jar"
         sh "java -jar rectangle_${env.BUILD_NUMBER}.jar 3 4"
       }
     }
@@ -81,8 +81,6 @@ pipeline{
         sh 'git merge develop'
         echo "pushing to origin Master"
         sh 'git push origin master'
-        sh 'crazycoder12'
-        sh 'Pramukhrajs@1'
 
       }
     }
