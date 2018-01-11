@@ -80,6 +80,7 @@ pipeline{
         echo "Merging develop into master branch"
         sh 'git merge develop'
         echo "pushing to origin Master"
+        sh 'git remote set-url origin git@github.com:CrazyCoder12/content-jenkins-java-project.git'
         sh 'git push origin master'
 
       }
