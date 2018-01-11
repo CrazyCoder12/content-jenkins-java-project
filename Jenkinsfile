@@ -67,21 +67,10 @@ pipeline{
       agent {
         label 'apache'
       }
-      when {
-        branch 'develop'
-      }
       steps {
         echo "stashing Any Local changes"
-        sh 'git stash'
-        echo "checking out Develop branch"
-        sh 'git checkout develop'
-        echo "checking out Master branch"
-        sh 'git checkout master'
-        echo "Merging develop into master branch"
-        sh 'git merge develop'
-        echo "pushing to origin Master"
-        sh 'git remote set-url origin git@github.com:CrazyCoder12/content-jenkins-java-project.git'
-        sh 'git push origin master'
+        sh 'git branch'
+        sh 'git status'
 
       }
     }
